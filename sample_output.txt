@@ -1,0 +1,23 @@
+=== Opening balances ===
+SAV-001: 500.00
+CUR-001: 200.00
+SAV-002: 1000.00
+CUR-002: 100.00
+
+=== Polymorphic withdraw(450.00) ===
+[SAV-001] Withdrawal of 450.00 REJECTED: balance would fall below the minimum of 100.00.
+[CUR-001] Withdrew 450.00. Account in OVERDRAFT: balance -250.00 (limit 300.00)
+[SAV-002] Withdrew 450.00. New balance: 550.00
+[CUR-002] Withdrawal of 450.00 REJECTED: exceeds overdraft limit of 300.00.
+
+=== Polymorphic endOfMonth() ===
+[SAV-001] Savings month-end: interest of 10.00 added. Balance: 510.00
+[CUR-001] Current month-end: maintenance fee of 10.00 deducted. Balance: -260.00
+[SAV-002] Savings month-end: interest of 11.00 added. Balance: 561.00
+[CUR-002] Current month-end: maintenance fee of 10.00 deducted. Balance: 90.00
+
+=== Final balances ===
+SAV-001: 510.00
+CUR-001: -260.00
+SAV-002: 561.00
+CUR-002: 90.00
